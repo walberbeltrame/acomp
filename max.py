@@ -8,12 +8,16 @@ def max(v):
       m = v[i] #(4)
   return m #(5)
 
-v = np.random.randint(1, 10000, 10000)
-s = sorted(v)
-r = sorted(v, reverse=True)
+def main(*args):
+  v = np.random.randint(1, 10000, 10000)
+  s = sorted(v)
+  # r = sorted(v, reverse=True)
 
-n1 = ns()
-m = max(s)
-n2 = ns()
+  n1 = ns()
+  max(s)
+  n2 = ns()
 
-print(n2-n1)
+  print(n2-n1)
+
+if __name__ == '__main__':
+    main()
