@@ -1,2 +1,2 @@
-import max
-max.main()
+import merge
+merge.main()

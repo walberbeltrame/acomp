@@ -6,7 +6,7 @@ def sort(v):
     c = v[i] #(2)
     p = i #(3)
     while p>0 and v[p-1]>c: #(4)
-      v[p]=v[p-1] #(5)
+      v[p] = v[p-1] #(5)
       p = p-1 #(6)
     v[p]=c #(7)
 
