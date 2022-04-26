@@ -27,7 +27,7 @@ def main(*args):
   r = sorted(v, reverse=True)
   
   n1 = ns()
-  v = sort(v)
+  sort(v)
   n2 = ns()
   print(n2-n1)
 
