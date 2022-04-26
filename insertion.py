@@ -11,7 +11,7 @@ def sort(v):
     v[p]=c #(7)
 
 def main(*args):
-  v = np.random.randint(1, 10000, 10000)
+  v = np.random.randint(1, 100, 100)
   s = sorted(v)
   r = sorted(v, reverse=True)
 

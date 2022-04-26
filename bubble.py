@@ -10,7 +10,7 @@ def sort(v):
         v[i+1] = t #(6)
 
 def main(*args):
-  v = np.random.randint(1, 1000, 1000)
+  v = np.random.randint(1, 100, 100)
   s = sorted(v)
   r = sorted(v, reverse=True)
 
