@@ -14,22 +14,31 @@ def sort(v, b=0, e=None):
     if e is None:
         e = len(v) - 1
     def _sort(v, b, e):
-        if b >= e:
+        if b >= e: #(1)
             return
-        p = partition(v, b, e)
-        _sort(v, b, p-1)
-        _sort(v, p+1, e)
+        p = partition(v, b, e) #(2)
+        _sort(v, b, p-1) #(3)
+        _sort(v, p+1, e) #(4)
     return _sort(v, b, e)
 
 def main(*args):
   v = np.random.randint(1, 100, 100)
-  # s = sorted(v)
-  # r = sorted(v, reverse=True)
+  s = sorted(v)
+  r = sorted(v, reverse=True)
   
   n1 = ns()
-  sort(v)
+  v = sort(v)
   n2 = ns()
+  print(n2-n1)
 
+  n1 = ns()
+  sort(s)
+  n2 = ns()
+  print(n2-n1)
+
+  n1 = ns()
+  sort(r)
+  n2 = ns()
   print(n2-n1)
 
 if __name__ == '__main__':

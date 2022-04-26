@@ -26,13 +26,22 @@ def sort(v):
 
 def main(*args):
   v = np.random.randint(1, 100, 100)
-  # s = sorted(v)
-  # r = sorted(v, reverse=True)
+  s = sorted(v)
+  r = sorted(v, reverse=True)
   
   n1 = ns()
   v = sort(v)
   n2 = ns()
+  print(n2-n1)
 
+  n1 = ns()
+  s = sort(s)
+  n2 = ns()
+  print(n2-n1)
+
+  n1 = ns()
+  r = sort(r)
+  n2 = ns()
   print(n2-n1)
 
 if __name__ == '__main__':

@@ -10,14 +10,23 @@ def sort(v):
         v[i+1] = t #(6)
 
 def main(*args):
-  v = np.random.randint(1, 100, 100)
-  # s = sorted(v)
-  # r = sorted(v, reverse=True)
+  v = np.random.randint(1, 1000, 1000)
+  s = sorted(v)
+  r = sorted(v, reverse=True)
 
   n1 = ns()
   sort(v)
   n2 = ns()
+  print(n2-n1)
 
+  n1 = ns()
+  sort(s)
+  n2 = ns()
+  print(n2-n1)
+
+  n1 = ns()
+  sort(r)
+  n2 = ns()
   print(n2-n1)
 
 if __name__ == '__main__':

@@ -10,13 +10,22 @@ def max(v):
 
 def main(*args):
   v = np.random.randint(1, 10000, 10000)
-  # s = sorted(v)
-  # r = sorted(v, reverse=True)
+  s = sorted(v)
+  r = sorted(v, reverse=True)
 
   n1 = ns()
   max(v)
   n2 = ns()
+  print(n2-n1)
+  
+  n1 = ns()
+  max(s)
+  n2 = ns()
+  print(n2-n1)
 
+  n1 = ns()
+  max(r)
+  n2 = ns()
   print(n2-n1)
 
 if __name__ == '__main__':
