@@ -1,2 +1,2 @@
-import quick
-quick.main()
+import fibonacci
+fibonacci.main()
