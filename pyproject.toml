@@ -7,6 +7,9 @@ authors = ["WalberBeltrame <<>>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 numpy = "^1.22.3"
+bintrees = "^2.2.0"
+networkx = "^2.8.3"
+structout = "^0.1.41"
 
 [tool.poetry.dev-dependencies]
 

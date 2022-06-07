@@ -1,4 +1,27 @@
 [[package]]
+name = "bintrees"
+version = "2.2.0"
+description = "Package provides Binary-, RedBlack- and AVL-Trees in Python and Cython."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
+name = "networkx"
+version = "2.8.3"
+description = "Python package for creating and manipulating graphs and networks"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+default = ["numpy (>=1.19)", "scipy (>=1.8)", "matplotlib (>=3.4)", "pandas (>=1.3)"]
+developer = ["pre-commit (>=2.19)", "mypy (>=0.960)"]
+doc = ["sphinx (>=4.5)", "pydata-sphinx-theme (>=0.8.1)", "sphinx-gallery (>=0.10)", "numpydoc (>=1.3)", "pillow (>=9.1)", "nb2plots (>=0.6)", "texext (>=0.6.6)"]
+extra = ["lxml (>=4.6)", "pygraphviz (>=1.9)", "pydot (>=1.4.2)", "sympy (>=1.10)"]
+test = ["pytest (>=7.1)", "pytest-cov (>=3.0)", "codecov (>=2.1)"]
+
+[[package]]
 name = "numpy"
 version = "1.22.3"
 description = "NumPy is the fundamental package for array computing with Python."
@@ -6,12 +29,59 @@ category = "main"
 optional = false
 python-versions = ">=3.8"
 
+[[package]]
+name = "scipy"
+version = "1.6.1"
+description = "SciPy: Scientific Library for Python"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+numpy = ">=1.16.5"
+
+[[package]]
+name = "structout"
+version = "0.1.41"
+description = "pretty print data structures"
+category = "main"
+optional = false
+python-versions = ">=3.4"
+
+[package.dependencies]
+networkx = "*"
+scipy = "*"
+sty = "*"
+
+[[package]]
+name = "sty"
+version = "1.0.4"
+description = "String styling for your terminal"
+category = "main"
+optional = false
+python-versions = "*"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "991972e7eb4f72b3a3746f926020830f54fa7944291e4c402ae7fe9d9c3968d4"
+content-hash = "e39319343486b5834f19040807f1a44f5bf6008652ce3769541154eed18002f5"
 
 [metadata.files]
+bintrees = [
+    {file = "bintrees-2.2.0-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:fd447cf71e7a81073a91de75c56e7ca530fda563832b97d69fd882b9e0ef89b1"},
+    {file = "bintrees-2.2.0-cp36-cp36m-win_amd64.whl", hash = "sha256:bfbc4dd3181609120d20ee73247521a8549644d129cd61582a986b1ef0671bd4"},
+    {file = "bintrees-2.2.0-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:620b799e07849765a5107e56349a4c422576084c75323315690b2ac0cdf4a7e4"},
+    {file = "bintrees-2.2.0-cp37-cp37m-win_amd64.whl", hash = "sha256:72bc8e2a9322011d8983980df4ce8e729781ec1ae63b41b8ee5fa34b41adb0b2"},
+    {file = "bintrees-2.2.0-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:18e6a28b09c7821cc29d40d4192d6f051ad9e8febb5962b0c30829b6e3c6509a"},
+    {file = "bintrees-2.2.0-cp38-cp38-win_amd64.whl", hash = "sha256:5ac1a93476a5a84b20b2bd5fa43d486cd971ef9749b564eaf95c46244af02523"},
+    {file = "bintrees-2.2.0-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:0b1faf7c2d7d5c0ee367901268fa19ef80360cbb16e88d0a27ecab5eeb01bfac"},
+    {file = "bintrees-2.2.0-cp39-cp39-win_amd64.whl", hash = "sha256:01c1968027c4da0c54f185bde2b7043ae5a826c0edd1beaef57da9c6cbe4d475"},
+    {file = "bintrees-2.2.0.zip", hash = "sha256:e180658d90789855dcb0e7d1eb2bfebc452d60c5b48e74de16b502d61a8352d1"},
+]
+networkx = [
+    {file = "networkx-2.8.3-py3-none-any.whl", hash = "sha256:f151edac6f9b0cf11fecce93e236ac22b499bb9ff8d6f8393b9fef5ad09506cc"},
+    {file = "networkx-2.8.3.tar.gz", hash = "sha256:67fab04a955a73eb660fe7bf281b6fa71a003bc6e23a92d2f6227654c5223dbe"},
+]
 numpy = [
     {file = "numpy-1.22.3-cp310-cp310-macosx_10_14_x86_64.whl", hash = "sha256:92bfa69cfbdf7dfc3040978ad09a48091143cffb778ec3b03fa170c494118d75"},
     {file = "numpy-1.22.3-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:8251ed96f38b47b4295b1ae51631de7ffa8260b5b087808ef09a39a9d66c97ab"},
@@ -33,4 +103,31 @@ numpy = [
     {file = "numpy-1.22.3-cp39-cp39-win_amd64.whl", hash = "sha256:639b54cdf6aa4f82fe37ebf70401bbb74b8508fddcf4797f9fe59615b8c5813a"},
     {file = "numpy-1.22.3-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c34ea7e9d13a70bf2ab64a2532fe149a9aced424cd05a2c4ba662fd989e3e45f"},
     {file = "numpy-1.22.3.zip", hash = "sha256:dbc7601a3b7472d559dc7b933b18b4b66f9aa7452c120e87dfb33d02008c8a18"},
+]
+scipy = [
+    {file = "scipy-1.6.1-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:a15a1f3fc0abff33e792d6049161b7795909b40b97c6cc2934ed54384017ab76"},
+    {file = "scipy-1.6.1-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:e79570979ccdc3d165456dd62041d9556fb9733b86b4b6d818af7a0afc15f092"},
+    {file = "scipy-1.6.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:a423533c55fec61456dedee7b6ee7dce0bb6bfa395424ea374d25afa262be261"},
+    {file = "scipy-1.6.1-cp37-cp37m-manylinux2014_aarch64.whl", hash = "sha256:33d6b7df40d197bdd3049d64e8e680227151673465e5d85723b3b8f6b15a6ced"},
+    {file = "scipy-1.6.1-cp37-cp37m-win32.whl", hash = "sha256:6725e3fbb47da428794f243864f2297462e9ee448297c93ed1dcbc44335feb78"},
+    {file = "scipy-1.6.1-cp37-cp37m-win_amd64.whl", hash = "sha256:5fa9c6530b1661f1370bcd332a1e62ca7881785cc0f80c0d559b636567fab63c"},
+    {file = "scipy-1.6.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:bd50daf727f7c195e26f27467c85ce653d41df4358a25b32434a50d8870fc519"},
+    {file = "scipy-1.6.1-cp38-cp38-manylinux1_i686.whl", hash = "sha256:f46dd15335e8a320b0fb4685f58b7471702234cba8bb3442b69a3e1dc329c345"},
+    {file = "scipy-1.6.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:0e5b0ccf63155d90da576edd2768b66fb276446c371b73841e3503be1d63fb5d"},
+    {file = "scipy-1.6.1-cp38-cp38-manylinux2014_aarch64.whl", hash = "sha256:2481efbb3740977e3c831edfd0bd9867be26387cacf24eb5e366a6a374d3d00d"},
+    {file = "scipy-1.6.1-cp38-cp38-win32.whl", hash = "sha256:68cb4c424112cd4be886b4d979c5497fba190714085f46b8ae67a5e4416c32b4"},
+    {file = "scipy-1.6.1-cp38-cp38-win_amd64.whl", hash = "sha256:5f331eeed0297232d2e6eea51b54e8278ed8bb10b099f69c44e2558c090d06bf"},
+    {file = "scipy-1.6.1-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:0c8a51d33556bf70367452d4d601d1742c0e806cd0194785914daf19775f0e67"},
+    {file = "scipy-1.6.1-cp39-cp39-manylinux1_i686.whl", hash = "sha256:83bf7c16245c15bc58ee76c5418e46ea1811edcc2e2b03041b804e46084ab627"},
+    {file = "scipy-1.6.1-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:794e768cc5f779736593046c9714e0f3a5940bc6dcc1dba885ad64cbfb28e9f0"},
+    {file = "scipy-1.6.1-cp39-cp39-manylinux2014_aarch64.whl", hash = "sha256:5da5471aed911fe7e52b86bf9ea32fb55ae93e2f0fac66c32e58897cfb02fa07"},
+    {file = "scipy-1.6.1-cp39-cp39-win32.whl", hash = "sha256:8e403a337749ed40af60e537cc4d4c03febddcc56cd26e774c9b1b600a70d3e4"},
+    {file = "scipy-1.6.1-cp39-cp39-win_amd64.whl", hash = "sha256:a5193a098ae9f29af283dcf0041f762601faf2e595c0db1da929875b7570353f"},
+    {file = "scipy-1.6.1.tar.gz", hash = "sha256:c4fceb864890b6168e79b0e714c585dbe2fd4222768ee90bc1aa0f8218691b11"},
+]
+structout = [
+    {file = "structout-0.1.41.tar.gz", hash = "sha256:9f311a7244ecdc306b8e39c4996b5a07c1de8ccc3f16e93487b268a60e06f754"},
+]
+sty = [
+    {file = "sty-1.0.4-py3-none-any.whl", hash = "sha256:3e3352f05770a37e11c9dfc303cbccb1c6acc13710e15d181cb43be7df89f8ea"},
 ]
