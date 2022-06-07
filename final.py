@@ -30,12 +30,12 @@ def search():
 def remove():
   return
 
-def f(k, v):
+def foo(k, v):
   print(k + ": " + str(v))
 
 def view():
   so.gprint(G)
-  T.foreach(f, 0)
+  T.foreach(foo, 0)
 
 def short():
   return
